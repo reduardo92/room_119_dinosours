@@ -1,0 +1,47 @@
+// tablets & sm lapops
+
+// 900px
+@mixin mediaSmLandscape {
+  @media screen and (orientation: landscape) and (max-device-width: $size-900) {
+    @content;
+  }
+}
+// 700px
+@mixin mediaTablet {
+  @media screen and (min-width: $table) {
+    @content;
+  }
+}
+
+// 992px
+// LandScape tablets
+@mixin tabletLg {
+  @media only screen and (min-width: $table-lg) {
+    @content;
+  }
+}
+
+// 1392px
+// laptops
+@mixin mediaLaptop {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+// Transition one
+@mixin easeIn($pro: all) {
+  transition: $pro 0.27s ease-in;
+}
+
+// tranition
+@mixin cubicBezier($trans: all 0.4s cubic-bezier(0.22, 0.43, 0.35, 1.5)) {
+  transition: $trans;
+}
+
+// set all cross browser animation
+@mixin allAnimationKits($animation: '') {
+  animation: $animation;
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+}

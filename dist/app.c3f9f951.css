@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+:root {
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-semi: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+  --fs-h1: 1.65rem;
+  --fs-h2: 1.3rem;
+  --fs-h3: 1.15rem;
+  --fs-body: 1rem;
+  --fs-small: 0.85rem;
+  --fs-icon: 1.5rem;
+}
+
+@media screen and (min-width: 43.75em) {
+  :root {
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.35rem;
+    --fs-small: 0.9rem;
+    --fs-icon: 1.8rem;
+  }
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  width: 100%;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs-body);
+  color: var(--clr-grey);
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #ff0000;
+  max-height: 500px;
+}
+
+@media only screen and (min-width: 62em) {
+  .hero img {
+    object-fit: none;
+  }
+}
+.word {
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Drag and Drop Related Styling */
+}
+.word .box {
+  width: 10rem;
+  height: 10rem;
+  border: 3px solid #333;
+  border-radius: 0.5rem;
+  margin: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  user-select: none;
+  cursor: move;
+  transition: 0.5s;
+}
+.word .box span {
+  pointer-events: none;
+}
+.word .drag-start {
+  opacity: 0.4;
+}
+.word .drag-enter {
+  border-style: dashed;
+}
+.word .box:nth-child(odd).drag-enter {
+  transform: rotate(15deg);
+}
+.word .box:nth-child(even).drag-enter {
+  transform: rotate(-15deg);
+}
+.word .box:nth-child(odd).drag-start {
+  transform: rotate(15deg) scale(0.75);
+}
+.word .box:nth-child(even).drag-start {
+  transform: rotate(-15deg) scale(0.75);
+}
+@media (max-width: 600px) {
+  .word .box {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
+}
+
+.draggable-elements,
+.droppable-elements {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
+
+.draggable {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  margin: 0rem 0.5rem;
+  cursor: move;
+  transition: opacity 0.2s;
+}
+
+.draggable:hover {
+  opacity: 0.5;
+}
+
+.droppable {
+  height: 6.5rem;
+  width: 6.5rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: #fff;
+  border: 3px dashed #111;
+  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+.droppable span {
+  font-size: 1.25rem;
+  pointer-events: none;
+  /* The element is never the target of pointer events */
+}
+
+/* Drag and Drop Related Styling */
+.droppable.droppable-hover {
+  /* background-color: #bee3f0; */
+  border-width: 5px;
+  transform: scale(1.1);
+}
+
+.droppable.dropped {
+  border-style: solid;
+  color: #fff;
+}
+
+.droppable.dropped span {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.droppable.dropped i {
+  pointer-events: none;
+}
+
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+}
+
+.draggable.dragged:hover {
+  opacity: 0.1;
+}
+
+@media (max-width: 600px) {
+  .draggable-elements {
+    margin: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=/app.c3f9f951.css.map */

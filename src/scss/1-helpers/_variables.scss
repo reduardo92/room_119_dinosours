@@ -1,0 +1,37 @@
+:root {
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-semi: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+  --fs-h1: 1.65rem;
+  --fs-h2: 1.3rem;
+  --fs-h3: 1.15rem;
+  --fs-body: 1rem;
+  --fs-small: 0.85rem;
+  // Icon Fs
+  --fs-icon: 1.5rem;
+}
+
+$clr-primary: #eb7f51;
+$clr-dark: #1f2233;
+$clr-white: #ceced2;
+$clr-dark-light: #24283d;
+
+//   Sass Varibles
+$table: 43.75em; // 700px
+$size-900: 56.25em; // 900px
+$table-lg: 62em; // 992px
+$laptop: 87em; // 1392px
+$laptop-xl: 106.25em; // 1700px
+
+@include mediaTablet {
+  :root {
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.35rem;
+    --fs-small: 0.9rem;
+    // Icon Fs
+    --fs-icon: 1.8rem;
+  }
+}

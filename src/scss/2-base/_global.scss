@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  width: 100%;
+  line-height: 1.6;
+  font-family: $f-primary;
+  font-size: var(--fs-body);
+  color: var(--clr-grey);
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+p {
+  font-family: $f-second;
+  line-height: 1.6;
+}
+
+// nav {
+//   all: unset;
+// }
+
+// input {
+//   -webkit-box-sizing: border-box !important; /* Safari/Chrome, other WebKit */
+//   -moz-box-sizing: border-box !important; /* Firefox, other Gecko */
+//   box-sizing: border-box !important;
+// }

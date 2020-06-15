@@ -1,0 +1,58 @@
+// @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.word {
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box {
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #333;
+    border-radius: 0.5rem;
+    margin: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    user-select: none;
+    cursor: move;
+    transition: 0.5s;
+  }
+  .box span {
+    pointer-events: none;
+  }
+
+  /* Drag and Drop Related Styling */
+
+  .drag-start {
+    opacity: 0.4;
+  }
+  .drag-enter {
+    border-style: dashed;
+  }
+  .box:nth-child(odd).drag-enter {
+    transform: rotate(15deg);
+  }
+  .box:nth-child(even).drag-enter {
+    transform: rotate(-15deg);
+  }
+  .box:nth-child(odd).drag-start {
+    transform: rotate(15deg) scale(0.75);
+  }
+  .box:nth-child(even).drag-start {
+    transform: rotate(-15deg) scale(0.75);
+  }
+
+  @media (max-width: 600px) {
+    .box {
+      width: 4rem;
+      height: 4rem;
+      font-size: 2rem;
+      margin: 0.5rem;
+    }
+  }
+}
