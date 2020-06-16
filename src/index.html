@@ -8,10 +8,10 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/45287ef9e3.js"></script>
     <!-- Materialze  -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    /> -->
     <!-- Logo icon -->
     <!-- <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" /> -->
     <title>Room 119 Dinosour's</title>
@@ -20,144 +20,656 @@
 
   <body>
     <header>
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right">
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#PictureMatch">Picture Match</a></li>
-            <li><a href="#WordMatch">Word Match</a></li>
+      <nav class="navbar">
+          <a href="#" class="brand-logo"><img src="./img/icons/blair_lgo.png" alt="blair logo"> Room 119</a>
+          <ul id="nav-mobile" class="right nav--links">
+            <li><a href="#number1">match number <span>(1 - 10)</span> </a></li>
+            <li><a href="#number2">match number <span>(11 - 20)</span></a></li>
+            <li><a href="#apl1">Alphabet Matching <span>(A - M)</span></a></li>
+            <li><a href="#apl2">Alphabet Matching <span>(N - Z)</span></a></li>
+            <li><a href="#wordSort">Word's Sort</a></li>
           </ul>
-        </div>
       </nav>
     </header>
 
     <main>
-      <!-- Hero -->
-      <section class="hero" id="home">
-        <img src="./img/blairHero.png" alt="blar banner" />
-      </section>
-      <!-- Match Img -->
-      <section class="section section--match container">
-        <div class="draggable-elements">
-          <i
-            class="fas fa-cat draggable"
-            draggable="true"
-            style="color: #ff6384;"
-            id="cat"
-          ></i>
-          <i
-            class="fas fa-dog draggable"
-            draggable="true"
-            style="color: #36a2eb;"
-            id="dog"
-          ></i>
-          <i
-            class="fas fa-dove draggable"
-            draggable="true"
-            style="color: #ffce56;"
-            id="dove"
-          ></i>
-          <i
-            class="fas fa-fish draggable"
-            draggable="true"
-            style="color: #9966ff;"
-            id="fish"
-          ></i>
-          <i
-            class="fas fa-frog draggable"
-            draggable="true"
-            style="color: #4bc0c0;"
-            id="frog"
-          ></i>
-          <i
-            class="fas fa-horse draggable"
-            draggable="true"
-            style="color: #333333;"
-            id="horse"
-          ></i>
-          <i
-            class="fas fa-hippo draggable"
-            draggable="true"
-            style="color: #ff9f40;"
-            id="hippo"
-          ></i>
-          <i
-            class="fas fa-spider draggable"
-            draggable="true"
-            style="color: #ff99cc;"
-            id="spider"
-          ></i>
+      <!-- Match Numbers -->
+      <section id="number1" class="section section--match">
+        <div class="container">
+          <div class="dino--numbers">
+            <h1 class="title">match Numbers (1 - 10)</h1>
+            <div class="draggable-elements">
+              <i
+                class="draggable"
+                draggable="true"
+                style="color: #ff6384;"
+                id="num0"
+              >
+              </i>
+              <i
+                class="fas fa-dog draggable"
+                draggable="true"
+                style="color: #36a2eb;"
+                id="num1"
+              ></i>
+              <i
+                class="fas fa-dove draggable"
+                draggable="true"
+                style="color: #ffce56;"
+                id="num2"
+              ></i>
+              <i
+                class="fas fa-fish draggable"
+                draggable="true"
+                style="color: #9966ff;"
+                id="num3"
+              ></i>
+              <i
+                class="fas fa-frog draggable"
+                draggable="true"
+                style="color: #4bc0c0;"
+                id="num4"
+              ></i>
+              <i
+                class="fas fa-horse draggable"
+                draggable="true"
+                style="color: #333333;"
+                id="num5"
+              ></i>
+              <i
+                class="fas fa-hippo draggable"
+                draggable="true"
+                style="color: #4bc0c0;"
+                id="num6"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff99cc;"
+                id="num7"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #333333;"
+                id="num8"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff99cc;"
+                id="num9"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff9f40;"
+                id="num10"
+              ></i>
+            </div>
+            <div class="droppable-elements">
+              <div class="droppable" data-draggable-id="num4">
+                <span>4</span>
+              </div>
+              <div class="droppable" data-draggable-id="num2">
+                <span>2</span>
+              </div>
+              <div class="droppable" data-draggable-id="num0">
+                <span>0</span>
+              </div>
+              <div class="droppable" data-draggable-id="num3">
+                <span>3</span>
+              </div>
+              <div class="droppable" data-draggable-id="num1">
+                <span>1</span>
+              </div>
+              <div class="droppable" data-draggable-id="num7">
+                <span>7</span>
+              </div>
+              <div class="droppable" data-draggable-id="num5">
+                <span>5</span>
+              </div>
+              <div class="droppable" data-draggable-id="num6">
+                <span>6</span>
+              </div>
+              <div class="droppable" data-draggable-id="num10">
+                <span>10</span>
+              </div>
+              <div class="droppable" data-draggable-id="num8">
+                <span>8</span>
+              </div>
+              <div class="droppable" data-draggable-id="num9">
+                <span>9</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="droppable-elements">
-          <div class="droppable" data-draggable-id="frog">
-            <span>Frog</span>
-          </div>
-          <div class="droppable" data-draggable-id="dove">
-            <span>Bird</span>
-          </div>
-          <div class="droppable" data-draggable-id="cat"><span>Cat</span></div>
-          <div class="droppable" data-draggable-id="fish">
-            <span>Fish</span>
-          </div>
-          <div class="droppable" data-draggable-id="dog"><span>Dog</span></div>
-          <div class="droppable" data-draggable-id="spider">
-            <span>Spider</span>
-          </div>
-          <div class="droppable" data-draggable-id="horse">
-            <span>Horse</span>
-          </div>
-          <div class="droppable" data-draggable-id="hippo">
-            <span>Hippo</span>
+      </section>
+      <section id="number2" class="section section--match">
+        <div class="container">
+          <div class="dino--numbers">
+            <h1 class="title">match Numbers (11 - 20)</h1>
+            <div class="draggable-elements">
+              <i
+                class="draggable"
+                draggable="true"
+                style="color: #ff6384;"
+                id="num11"
+              >
+              </i>
+              <i
+                class="fas fa-dog draggable"
+                draggable="true"
+                style="color: #36a2eb;"
+                id="num12"
+              ></i>
+              <i
+                class="fas fa-dove draggable"
+                draggable="true"
+                style="color: #ffce56;"
+                id="num13"
+              ></i>
+              <i
+                class="fas fa-fish draggable"
+                draggable="true"
+                style="color: #9966ff;"
+                id="num14"
+              ></i>
+              <i
+                class="fas fa-frog draggable"
+                draggable="true"
+                style="color: #4bc0c0;"
+                id="num15"
+              ></i>
+              <i
+                class="fas fa-horse draggable"
+                draggable="true"
+                style="color: #333333;"
+                id="num16"
+              ></i>
+              <i
+                class="fas fa-hippo draggable"
+                draggable="true"
+                style="color: #ff9f40;"
+                id="num17"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff99cc;"
+                id="num18"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff99cc;"
+                id="num19"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff99cc;"
+                id="num20"
+              ></i>
+            </div>
+            <div class="droppable-elements">
+              <div class="droppable" data-draggable-id="num20">
+                <span>20</span>
+              </div>
+              <div class="droppable" data-draggable-id="num14">
+                <span>14</span>
+              </div>
+              <div class="droppable" data-draggable-id="num17">
+                <span>17</span>
+              </div>
+              <div class="droppable" data-draggable-id="num12">
+                <span>12</span>
+              </div>
+              <div class="droppable" data-draggable-id="num19">
+                <span>19</span>
+              </div>
+              <div class="droppable" data-draggable-id="num15">
+                <span>15</span>
+              </div>
+              <div class="droppable" data-draggable-id="num13">
+                <span>13</span>
+              </div>
+              <div class="droppable" data-draggable-id="num16">
+                <span>16</span>
+              </div>
+              <div class="droppable" data-draggable-id="num11">
+                <span>11</span>
+              </div>
+              <div class="droppable" data-draggable-id="num18">
+                <span>18</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- Match Img -->
-      <section class="section section--words container">
-        <section class="word">
+      <!-- Match Aplpabet -->
+      <section id="apl1" class="section section--match">
+        <div class="container">
+          <div class="dino--numbers">
+            <h1 class="title">Alphabet matching  (A - M)</h1>
+            <div class="draggable-elements">
+              <i
+                class="draggable"
+                draggable="true"
+                style="color: #ff6384;"
+                id="alpA"
+              >
+              </i>
+              <i
+                class="fas fa-dog draggable"
+                draggable="true"
+                style="color: #36a2eb;"
+                id="alpB"
+              ></i>
+              <i
+                class="fas fa-dove draggable"
+                draggable="true"
+                style="color: #ffce56;"
+                id="alpC"
+              ></i>
+              <i
+                class="fas fa-fish draggable"
+                draggable="true"
+                style="color: #9966ff;"
+                id="alpD"
+              ></i>
+              <i
+                class="fas fa-frog draggable"
+                draggable="true"
+                style="color: #4bc0c0;"
+                id="alpE"
+              ></i>
+              <i
+                class="fas fa-horse draggable"
+                draggable="true"
+                style="color: #333333;"
+                id="alpF"
+              ></i>
+              <i
+                class="fas fa-hippo draggable"
+                draggable="true"
+                style="color: #4bc0c0;"
+                id="alpG"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff99cc;"
+                id="alpH"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #333333;"
+                id="alpI"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff99cc;"
+                id="alpJ"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ffce56;"
+                id="alpK"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #4bc0c0;"
+                id="alpL"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff9f40;"
+                id="alpM"
+              ></i>
+            </div>
+            <div class="droppable-elements">
+              <div class="droppable" data-draggable-id="alpA">
+                <span>A</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpB">
+                <span>B</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpC">
+                <span>C</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpD">
+                <span>D</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpE">
+                <span>E</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpF">
+                <span>F</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpG">
+                <span>G</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpH">
+                <span>H</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpI">
+                <span>I</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpJ">
+                <span>J</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpK">
+                <span>K</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpL">
+                <span>L</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpM">
+                <span>M</span>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section  id="apl2" class="section section--match">
+        <div class="container">
+          <div class="dino--numbers">
+            <h1 class="title">Alphabet matching  (N - Z)</h1>
+            <div class="draggable-elements">
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff9f40;"
+                id="alpN"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff6384;"
+                id="alpO"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #36a2eb;"
+                id="alpP"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #9966ff;"
+                id="alpQ"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff9f40;"
+                id="alpR"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff6384;"
+                id="alpS"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #36a2eb;"
+                id="alpT"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff9f40;"
+                id="alpU"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #9966ff;"
+                id="alpV"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff9f40;"
+                id="alpW"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #36a2eb;"
+                id="alpX"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff6384;"
+                id="alpY"
+              ></i>
+              <i
+                class="fas fa-spider draggable"
+                draggable="true"
+                style="color: #ff9f40;"
+                id="alpZ"
+              ></i>
+            </div>
+            <div class="droppable-elements">
+              <div class="droppable" data-draggable-id="alpX">
+                <span>X</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpP">
+                <span>P</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpT">
+                <span>T</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpZ">
+                <span>Z</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpN">
+                <span>N</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpR">
+                <span>R</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpO">
+                <span>O</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpY">
+                <span>Y</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpU">
+                <span>U</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpW">
+                <span>W</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpS">
+                <span>S</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpV">
+                <span>V</span>
+              </div>
+              <div class="droppable" data-draggable-id="alpQ">
+                <span>Q</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sort  Word -->
+      <section id='wordSort' class="section section--words">
+        <div class="container">
+          <h1 class="title">Sort Dinosour Word's</h1>
+          <div class="word--container">
+           <div class="word--name">
+             <img class="title--word--img" src="./img/trex.png" alt="trex">
+             <h2 class="title--word">Trex</h2>
+           </div> 
+          <section class="word">
           <div
             class="box"
             draggable="true"
             style="background-color: #ff6384;"
-            id="box-a"
+            id="box-xx"
           >
-            <span>A</span>
+            <span>X</span>
           </div>
           <div
             class="box"
             draggable="true"
             style="background-color: #36a2eb;"
-            id="box-b"
+            id="box-tt"
           >
-            <span>B</span>
-          </div>
-          <div
-            class="box"
-            draggable="true"
-            style="background-color: #ffce56;"
-            id="box-c"
-          >
-            <span>C</span>
-          </div>
-          <div
-            class="box"
-            draggable="true"
-            style="background-color: #9966ff;"
-            id="box-d"
-          >
-            <span>D</span>
+            <span>T</span>
           </div>
           <div
             class="box"
             draggable="true"
             style="background-color: #4bc0c0;"
-            id="box-e"
+            id="box-eee"
           >
             <span>E</span>
           </div>
-        </section>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: #ffce56;"
+            id="box-rr"
+          >
+            <span>R</span>
+          </div>
+          
+          </section>
+          </div>
+          <div class="word--container">
+           <div class="word--name">
+             <img class="title--word--img" src="./img/stégosaure.png" alt="stégosaure">
+             <h2 class="title--word">STEGOSAURUS</h2>
+           </div> 
+          <section class="word">
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: #ff6384;"
+            id="box-t"
+          >
+            <span>T</span>
+          </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: #36a2eb;"
+            id="box-g"
+          >
+            <span>g</span>
+          </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: #eb369a;"
+            id="box-a"
+          >
+            <span>a</span>
+          </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: #4bc0c0;"
+            id="box-s"
+          >
+            <span>s</span>
+          </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: #ff6384;"
+            id="box-e"
+          >
+            <span>e</span>
+          </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: coral;"
+            id="box-ss"
+          >
+            <span>s</span>
+          </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: coral;"
+            id="box-uu"
+          >
+            <span>u</span>
+          </div>
+          <div
+          class="box"
+          draggable="true"
+          style="background-color: #fbff00;"
+          id="box-o"
+        >
+          <span>o</span>
+        </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color:  #ffce56;"
+            id="box-u"
+          >
+            <span>u</span>
+          </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: #f956ff;"
+            id="box-r"
+          >
+            <span>r</span>
+          </div>
+          <div
+            class="box"
+            draggable="true"
+            style="background-color: #fbff00;"
+            id="box-sss"
+          >
+            <span>s</span>
+          </div>
+          
+          </section>
+          </div>
+        </div>
       </section>
+
     </main>
+    <footer class="footer">
+      <div class="footer--content mx-width">
+        <a href="#" class="logo footer--logo">
+          <img src="./img/icons/blair_lgo.png" alt="logo" class="logo--img" />
+        </a>
+        <nav class="footer--nav">
+            <a href="#number1">match number <span>(1 - 10)</span> </a>
+            <a href="#number2">match number <span>(11 - 20)</span></a>
+            <a href="#apl1">Alphabet Matching <span>(A - M)</span></a>
+            <a href="#apl2">Alphabet Matching <span>(N - Z)</span></a>
+            <a href="#wordSort">Word's Sort</a></li>
+        </nav>
+      </div>
+      <div class="footer--copyright">
+        <p class="copy">
+          © Design & Coded by Eduardo Rivas
+        </p>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>

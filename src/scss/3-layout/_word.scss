@@ -5,10 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // flex-wrap: wrap;
 
   .box {
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
     border: 3px solid #333;
     border-radius: 0.5rem;
     margin: 1.25rem;
@@ -16,11 +17,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     user-select: none;
     cursor: move;
     transition: 0.5s;
+    text-transform: uppercase;
   }
   .box span {
     pointer-events: none;
@@ -55,4 +57,29 @@
       margin: 0.5rem;
     }
   }
+}
+
+.word--container {
+  margin-bottom: 10em;
+}
+
+.word--name {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title--word {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 0.1em;
+  border-bottom: solid 5px #f1da8a;
+  margin: 1em 0;
+}
+
+.title--word--img {
+  width: 220px;
 }

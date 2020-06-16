@@ -3,23 +3,25 @@
 .draggable-elements,
 .droppable-elements {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 2rem;
 }
 .draggable {
-  height: 5rem;
-  width: 5rem;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  margin: 0rem 0.5rem;
+  margin: 1rem 0.5rem;
   cursor: move;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s linear;
+  @include cubicBezier;
 }
 .draggable:hover {
-  opacity: 0.5;
+  opacity: 0.8;
+  filter: grayscale(1);
+  transform: scale(1.2);
 }
 .droppable {
   height: 6.5rem;
@@ -37,7 +39,7 @@
   transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
 }
 .droppable span {
-  font-size: 1.25rem;
+  font-size: 2rem;
   pointer-events: none; /* The element is never the target of pointer events */
 }
 
@@ -53,12 +55,16 @@
   color: #fff;
 }
 .droppable.dropped span {
-  font-size: 0.75rem;
+  font-size: 1.3rem;
   margin-top: 0.5rem;
 }
-.droppable.dropped i {
-  pointer-events: none;
+.droppable.dropped {
+  i,
+  img {
+    pointer-events: none;
+  }
 }
+
 .draggable.dragged {
   user-select: none;
   opacity: 0.1;
@@ -72,4 +78,167 @@
   .draggable-elements {
     margin: 1.5rem;
   }
+}
+
+.draggable-elements {
+  i {
+    position: relative;
+    filter: drop-shadow(2px 1px 3px black);
+    &::before {
+      content: '';
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#num0::before {
+  background-image: url('../img/dinoNumbers/0.png');
+}
+#num1::before {
+  background-image: url('../img/dinoNumbers/1.png');
+}
+#num2::before {
+  background-image: url('../img/dinoNumbers/2.png');
+}
+#num3::before {
+  background-image: url('../img/dinoNumbers/3.png');
+}
+#num4::before {
+  background-image: url('../img/dinoNumbers/4.png');
+}
+#num5::before {
+  background-image: url('../img/dinoNumbers/5.png');
+}
+#num6::before {
+  background-image: url('../img/dinoNumbers/6.png');
+}
+#num7::before {
+  background-image: url('../img/dinoNumbers/7.png');
+}
+#num8::before {
+  background-image: url('../img/dinoNumbers/8.png');
+}
+#num9::before {
+  background-image: url('../img/dinoNumbers/9.png');
+}
+#num10::before {
+  background-image: url('../img/dinoNumbers/10.png');
+}
+#num11::before {
+  background-image: url('../img/dinoNumbers/11.png');
+}
+#num12::before {
+  background-image: url('../img/dinoNumbers/12.png');
+}
+#num13::before {
+  background-image: url('../img/dinoNumbers/13.png');
+}
+#num14::before {
+  background-image: url('../img/dinoNumbers/14.png');
+}
+#num15::before {
+  background-image: url('../img/dinoNumbers/15.png');
+}
+#num16::before {
+  background-image: url('../img/dinoNumbers/16.png');
+}
+#num17::before {
+  background-image: url('../img/dinoNumbers/17.png');
+}
+#num18::before {
+  background-image: url('../img/dinoNumbers/18.png');
+}
+#num19::before {
+  background-image: url('../img/dinoNumbers/19.png');
+}
+#num20::before {
+  background-image: url('../img/dinoNumbers/20.png');
+}
+
+// Aplabet
+
+#alpA::before {
+  background-image: url('../img/dinoAlpha/a.png');
+}
+#alpB::before {
+  background-image: url('../img/dinoAlpha/b.png');
+}
+#alpC::before {
+  background-image: url('../img/dinoAlpha/c.png');
+}
+#alpD::before {
+  background-image: url('../img/dinoAlpha/d.png');
+}
+#alpE::before {
+  background-image: url('../img/dinoAlpha/e.png');
+}
+#alpF::before {
+  background-image: url('../img/dinoAlpha/f.png');
+}
+#alpG::before {
+  background-image: url('../img/dinoAlpha/g.png');
+}
+#alpH::before {
+  background-image: url('../img/dinoAlpha/h.png');
+}
+#alpI::before {
+  background-image: url('../img/dinoAlpha/i.png');
+}
+#alpJ::before {
+  background-image: url('../img/dinoAlpha/j.png');
+}
+#alpK::before {
+  background-image: url('../img/dinoAlpha/k.png');
+}
+#alpL::before {
+  background-image: url('../img/dinoAlpha/l.png');
+}
+#alpM::before {
+  background-image: url('../img/dinoAlpha/m.png');
+}
+#alpN::before {
+  background-image: url('../img/dinoAlpha/n.png');
+}
+#alpO::before {
+  background-image: url('../img/dinoAlpha/o.png');
+}
+#alpP::before {
+  background-image: url('../img/dinoAlpha/p.png');
+}
+#alpQ::before {
+  background-image: url('../img/dinoAlpha/q.png');
+}
+#alpR::before {
+  background-image: url('../img/dinoAlpha/r.png');
+}
+#alpS::before {
+  background-image: url('../img/dinoAlpha/s.png');
+}
+#alpT::before {
+  background-image: url('../img/dinoAlpha/t.png');
+}
+#alpU::before {
+  background-image: url('../img/dinoAlpha/u.png');
+}
+#alpV::before {
+  background-image: url('../img/dinoAlpha/v.png');
+}
+#alpW::before {
+  background-image: url('../img/dinoAlpha/w.png');
+}
+#alpX::before {
+  background-image: url('../img/dinoAlpha/x.png');
+}
+#alpY::before {
+  background-image: url('../img/dinoAlpha/y.png');
+}
+#alpZ::before {
+  background-image: url('../img/dinoAlpha/z.png');
 }

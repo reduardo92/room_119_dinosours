@@ -1,0 +1,77 @@
+header {
+  background-color: #ff0000;
+  // background-color: #020202;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1450px;
+  margin: auto;
+  padding: 0 1em;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+
+  img {
+    margin-right: 1em;
+    width: 100px;
+  }
+}
+
+.nav--links {
+  display: flex;
+  //   align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 1em;
+
+  a {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    color: white;
+    display: inline-block;
+    margin: 0.5em 0;
+  }
+}
+
+@include mediaTablet {
+  .nav--links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+      span {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include tabletLg {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav--links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+      margin: 1em 1.5em;
+      span {
+        display: inline;
+      }
+    }
+  }
+}

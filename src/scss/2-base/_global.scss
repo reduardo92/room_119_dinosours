@@ -30,12 +30,41 @@ p {
   line-height: 1.6;
 }
 
-// nav {
-//   all: unset;
-// }
+.title {
+  font-size: var(--fs-h1);
+  font-weight: bold;
+  margin-bottom: 2em;
+  text-align: center;
+  text-transform: capitalize;
+}
 
-// input {
-//   -webkit-box-sizing: border-box !important; /* Safari/Chrome, other WebKit */
-//   -moz-box-sizing: border-box !important; /* Firefox, other Gecko */
-//   box-sizing: border-box !important;
-// }
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5em 0;
+
+  .title {
+    color: white;
+  }
+}
+
+.section:nth-of-type(odd) {
+  background-color: #3cbee6;
+}
+
+.section:nth-of-type(even) {
+  background-color: #ff0000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 90%;
+  }
+}

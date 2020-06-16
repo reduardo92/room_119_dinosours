@@ -2,7 +2,9 @@ const draggableElements = document.querySelectorAll('.draggable');
 const droppableElements = document.querySelectorAll('.droppable');
 
 draggableElements.forEach((elem) => {
-  elem.addEventListener('dragstart', dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
+  elem.addEventListener('dragstart', dragStart);
+
+  // Fires as soon as the user starts dragging an item - This is where we can define the drag data
   // elem.addEventListener("drag", drag); // Fires when a dragged item (element or text selection) is dragged
   // elem.addEventListener("dragend", dragEnd); // Fires when a drag operation ends (such as releasing a mouse button or hitting the Esc key) - After the dragend event, the drag and drop operation is complete
 });

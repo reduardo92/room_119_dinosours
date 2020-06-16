@@ -10,7 +10,6 @@ boxElements.forEach((elem) => {
   elem.addEventListener('drop', drop);
 });
 
-console.log('fdfdfd');
 // Drag and Drop Functions
 
 function dragStart(event) {

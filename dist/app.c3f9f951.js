@@ -188,8 +188,7 @@ boxElements.forEach(function (elem) {
   elem.addEventListener('dragover', dragOver);
   elem.addEventListener('dragleave', dragLeave);
   elem.addEventListener('drop', drop);
-});
-console.log('fdfdfd'); // Drag and Drop Functions
+}); // Drag and Drop Functions
 
 function dragStart(event) {
   event.target.classList.add('drag-start');
@@ -304,7 +303,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/app.js":[function(require,module,exports) {
+},{"./..\\img\\dinoNumbers\\0.png":[["0.c7c07da1.png","img/dinoNumbers/0.png"],"img/dinoNumbers/0.png"],"./..\\img\\dinoNumbers\\1.png":[["1.6c331d2a.png","img/dinoNumbers/1.png"],"img/dinoNumbers/1.png"],"./..\\img\\dinoNumbers\\2.png":[["2.bcfb4529.png","img/dinoNumbers/2.png"],"img/dinoNumbers/2.png"],"./..\\img\\dinoNumbers\\3.png":[["3.cba2bdb1.png","img/dinoNumbers/3.png"],"img/dinoNumbers/3.png"],"./..\\img\\dinoNumbers\\4.png":[["4.8f38a348.png","img/dinoNumbers/4.png"],"img/dinoNumbers/4.png"],"./..\\img\\dinoNumbers\\5.png":[["5.125e3d6a.png","img/dinoNumbers/5.png"],"img/dinoNumbers/5.png"],"./..\\img\\dinoNumbers\\6.png":[["6.c4f72956.png","img/dinoNumbers/6.png"],"img/dinoNumbers/6.png"],"./..\\img\\dinoNumbers\\7.png":[["7.e9ce1379.png","img/dinoNumbers/7.png"],"img/dinoNumbers/7.png"],"./..\\img\\dinoNumbers\\8.png":[["8.3c6f8e9e.png","img/dinoNumbers/8.png"],"img/dinoNumbers/8.png"],"./..\\img\\dinoNumbers\\9.png":[["9.e8e439b1.png","img/dinoNumbers/9.png"],"img/dinoNumbers/9.png"],"./..\\img\\dinoNumbers\\10.png":[["10.438520e6.png","img/dinoNumbers/10.png"],"img/dinoNumbers/10.png"],"./..\\img\\dinoNumbers\\11.png":[["11.bb9dcaf1.png","img/dinoNumbers/11.png"],"img/dinoNumbers/11.png"],"./..\\img\\dinoNumbers\\12.png":[["12.f1498f22.png","img/dinoNumbers/12.png"],"img/dinoNumbers/12.png"],"./..\\img\\dinoNumbers\\13.png":[["13.0fc18665.png","img/dinoNumbers/13.png"],"img/dinoNumbers/13.png"],"./..\\img\\dinoNumbers\\14.png":[["14.69e2258b.png","img/dinoNumbers/14.png"],"img/dinoNumbers/14.png"],"./..\\img\\dinoNumbers\\15.png":[["15.35497787.png","img/dinoNumbers/15.png"],"img/dinoNumbers/15.png"],"./..\\img\\dinoNumbers\\16.png":[["16.e184e328.png","img/dinoNumbers/16.png"],"img/dinoNumbers/16.png"],"./..\\img\\dinoNumbers\\17.png":[["17.02dd9300.png","img/dinoNumbers/17.png"],"img/dinoNumbers/17.png"],"./..\\img\\dinoNumbers\\18.png":[["18.d4b83929.png","img/dinoNumbers/18.png"],"img/dinoNumbers/18.png"],"./..\\img\\dinoNumbers\\19.png":[["19.79a1df0c.png","img/dinoNumbers/19.png"],"img/dinoNumbers/19.png"],"./..\\img\\dinoNumbers\\20.png":[["20.bfa5c4ed.png","img/dinoNumbers/20.png"],"img/dinoNumbers/20.png"],"./..\\img\\dinoAlpha\\a.png":[["a.f6083b96.png","img/dinoAlpha/a.png"],"img/dinoAlpha/a.png"],"./..\\img\\dinoAlpha\\b.png":[["b.63f0e36a.png","img/dinoAlpha/b.png"],"img/dinoAlpha/b.png"],"./..\\img\\dinoAlpha\\c.png":[["c.bfcb7fbf.png","img/dinoAlpha/c.png"],"img/dinoAlpha/c.png"],"./..\\img\\dinoAlpha\\d.png":[["d.e91b7da7.png","img/dinoAlpha/d.png"],"img/dinoAlpha/d.png"],"./..\\img\\dinoAlpha\\e.png":[["e.953811df.png","img/dinoAlpha/e.png"],"img/dinoAlpha/e.png"],"./..\\img\\dinoAlpha\\f.png":[["f.ad1d52a4.png","img/dinoAlpha/f.png"],"img/dinoAlpha/f.png"],"./..\\img\\dinoAlpha\\g.png":[["g.9ea36251.png","img/dinoAlpha/g.png"],"img/dinoAlpha/g.png"],"./..\\img\\dinoAlpha\\h.png":[["h.329586da.png","img/dinoAlpha/h.png"],"img/dinoAlpha/h.png"],"./..\\img\\dinoAlpha\\i.png":[["i.ae9a37ff.png","img/dinoAlpha/i.png"],"img/dinoAlpha/i.png"],"./..\\img\\dinoAlpha\\j.png":[["j.58dd3a46.png","img/dinoAlpha/j.png"],"img/dinoAlpha/j.png"],"./..\\img\\dinoAlpha\\k.png":[["k.159216f1.png","img/dinoAlpha/k.png"],"img/dinoAlpha/k.png"],"./..\\img\\dinoAlpha\\l.png":[["l.66d794ec.png","img/dinoAlpha/l.png"],"img/dinoAlpha/l.png"],"./..\\img\\dinoAlpha\\m.png":[["m.52da1ae2.png","img/dinoAlpha/m.png"],"img/dinoAlpha/m.png"],"./..\\img\\dinoAlpha\\n.png":[["n.97864af0.png","img/dinoAlpha/n.png"],"img/dinoAlpha/n.png"],"./..\\img\\dinoAlpha\\o.png":[["o.80fcbf60.png","img/dinoAlpha/o.png"],"img/dinoAlpha/o.png"],"./..\\img\\dinoAlpha\\p.png":[["p.5e75b974.png","img/dinoAlpha/p.png"],"img/dinoAlpha/p.png"],"./..\\img\\dinoAlpha\\q.png":[["q.0be2bc1b.png","img/dinoAlpha/q.png"],"img/dinoAlpha/q.png"],"./..\\img\\dinoAlpha\\r.png":[["r.641922b8.png","img/dinoAlpha/r.png"],"img/dinoAlpha/r.png"],"./..\\img\\dinoAlpha\\s.png":[["s.72706e70.png","img/dinoAlpha/s.png"],"img/dinoAlpha/s.png"],"./..\\img\\dinoAlpha\\t.png":[["t.999be672.png","img/dinoAlpha/t.png"],"img/dinoAlpha/t.png"],"./..\\img\\dinoAlpha\\u.png":[["u.359171cc.png","img/dinoAlpha/u.png"],"img/dinoAlpha/u.png"],"./..\\img\\dinoAlpha\\v.png":[["v.8c39bb3b.png","img/dinoAlpha/v.png"],"img/dinoAlpha/v.png"],"./..\\img\\dinoAlpha\\w.png":[["w.651818b7.png","img/dinoAlpha/w.png"],"img/dinoAlpha/w.png"],"./..\\img\\dinoAlpha\\x.png":[["x.dae0f9c2.png","img/dinoAlpha/x.png"],"img/dinoAlpha/x.png"],"./..\\img\\dinoAlpha\\y.png":[["y.d4e77739.png","img/dinoAlpha/y.png"],"img/dinoAlpha/y.png"],"./..\\img\\dinoAlpha\\z.png":[["z.26a7d897.png","img/dinoAlpha/z.png"],"img/dinoAlpha/z.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/app.js":[function(require,module,exports) {
 "use strict";
 
 require("../js/match");
@@ -312,8 +311,6 @@ require("../js/match");
 require("../js/word");
 
 require("./../scss/main.scss");
-
-console.log('object');
 },{"../js/match":"js/match.js","../js/word":"js/word.js","./../scss/main.scss":"scss/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -342,7 +339,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63904" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64287" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

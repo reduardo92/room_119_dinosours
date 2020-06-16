@@ -208,20 +208,109 @@ p {
   line-height: 1.6;
 }
 
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.title {
+  font-size: var(--fs-h1);
+  font-weight: bold;
+  margin-bottom: 2em;
   text-align: center;
-  overflow: hidden;
-  background-color: #ff0000;
-  max-height: 500px;
+  text-transform: capitalize;
 }
 
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5em 0;
+}
+.section .title {
+  color: white;
+}
+
+.section:nth-of-type(odd) {
+  background-color: #3cbee6;
+}
+
+.section:nth-of-type(even) {
+  background-color: #ff0000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 90%;
+  }
+}
+header {
+  background-color: #ff0000;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1450px;
+  margin: auto;
+  padding: 0 1em;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+}
+.brand-logo img {
+  margin-right: 1em;
+  width: 100px;
+}
+
+.nav--links {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 1em;
+}
+.nav--links a {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  color: white;
+  display: inline-block;
+  margin: 0.5em 0;
+}
+
+@media screen and (min-width: 43.75em) {
+  .nav--links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav--links a span {
+    display: block;
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 62em) {
-  .hero img {
-    object-fit: none;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav--links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav--links a {
+    margin: 1em 1.5em;
+  }
+  .nav--links a span {
+    display: inline;
   }
 }
 .word {
@@ -232,8 +321,8 @@ p {
   /* Drag and Drop Related Styling */
 }
 .word .box {
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   border: 3px solid #333;
   border-radius: 0.5rem;
   margin: 1.25rem;
@@ -241,11 +330,12 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   user-select: none;
   cursor: move;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 .word .box span {
   pointer-events: none;
@@ -277,28 +367,55 @@ p {
   }
 }
 
+.word--container {
+  margin-bottom: 10em;
+}
+
+.word--name {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title--word {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 0.1em;
+  border-bottom: solid 5px #f1da8a;
+  margin: 1em 0;
+}
+
+.title--word--img {
+  width: 220px;
+}
+
 .draggable-elements,
 .droppable-elements {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 2rem;
 }
 
 .draggable {
-  height: 5rem;
-  width: 5rem;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  margin: 0rem 0.5rem;
+  margin: 1rem 0.5rem;
   cursor: move;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s linear;
+  transition: all 0.4s cubic-bezier(0.22, 0.43, 0.35, 1.5);
 }
 
 .draggable:hover {
-  opacity: 0.5;
+  opacity: 0.8;
+  filter: grayscale(1);
+  transform: scale(1.2);
 }
 
 .droppable {
@@ -318,7 +435,7 @@ p {
 }
 
 .droppable span {
-  font-size: 1.25rem;
+  font-size: 2rem;
   pointer-events: none;
   /* The element is never the target of pointer events */
 }
@@ -336,11 +453,12 @@ p {
 }
 
 .droppable.dropped span {
-  font-size: 0.75rem;
+  font-size: 1.3rem;
   margin-top: 0.5rem;
 }
 
-.droppable.dropped i {
+.droppable.dropped i,
+.droppable.dropped img {
   pointer-events: none;
 }
 
@@ -357,6 +475,265 @@ p {
 @media (max-width: 600px) {
   .draggable-elements {
     margin: 1.5rem;
+  }
+}
+.draggable-elements i {
+  position: relative;
+  filter: drop-shadow(2px 1px 3px black);
+}
+.draggable-elements i::before {
+  content: "";
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#num0::before {
+  background-image: url("/0.c7c07da1.png");
+}
+
+#num1::before {
+  background-image: url("/1.6c331d2a.png");
+}
+
+#num2::before {
+  background-image: url("/2.bcfb4529.png");
+}
+
+#num3::before {
+  background-image: url("/3.cba2bdb1.png");
+}
+
+#num4::before {
+  background-image: url("/4.8f38a348.png");
+}
+
+#num5::before {
+  background-image: url("/5.125e3d6a.png");
+}
+
+#num6::before {
+  background-image: url("/6.c4f72956.png");
+}
+
+#num7::before {
+  background-image: url("/7.e9ce1379.png");
+}
+
+#num8::before {
+  background-image: url("/8.3c6f8e9e.png");
+}
+
+#num9::before {
+  background-image: url("/9.e8e439b1.png");
+}
+
+#num10::before {
+  background-image: url("/10.438520e6.png");
+}
+
+#num11::before {
+  background-image: url("/11.bb9dcaf1.png");
+}
+
+#num12::before {
+  background-image: url("/12.f1498f22.png");
+}
+
+#num13::before {
+  background-image: url("/13.0fc18665.png");
+}
+
+#num14::before {
+  background-image: url("/14.69e2258b.png");
+}
+
+#num15::before {
+  background-image: url("/15.35497787.png");
+}
+
+#num16::before {
+  background-image: url("/16.e184e328.png");
+}
+
+#num17::before {
+  background-image: url("/17.02dd9300.png");
+}
+
+#num18::before {
+  background-image: url("/18.d4b83929.png");
+}
+
+#num19::before {
+  background-image: url("/19.79a1df0c.png");
+}
+
+#num20::before {
+  background-image: url("/20.bfa5c4ed.png");
+}
+
+#alpA::before {
+  background-image: url("/a.f6083b96.png");
+}
+
+#alpB::before {
+  background-image: url("/b.63f0e36a.png");
+}
+
+#alpC::before {
+  background-image: url("/c.bfcb7fbf.png");
+}
+
+#alpD::before {
+  background-image: url("/d.e91b7da7.png");
+}
+
+#alpE::before {
+  background-image: url("/e.953811df.png");
+}
+
+#alpF::before {
+  background-image: url("/f.ad1d52a4.png");
+}
+
+#alpG::before {
+  background-image: url("/g.9ea36251.png");
+}
+
+#alpH::before {
+  background-image: url("/h.329586da.png");
+}
+
+#alpI::before {
+  background-image: url("/i.ae9a37ff.png");
+}
+
+#alpJ::before {
+  background-image: url("/j.58dd3a46.png");
+}
+
+#alpK::before {
+  background-image: url("/k.159216f1.png");
+}
+
+#alpL::before {
+  background-image: url("/l.66d794ec.png");
+}
+
+#alpM::before {
+  background-image: url("/m.52da1ae2.png");
+}
+
+#alpN::before {
+  background-image: url("/n.97864af0.png");
+}
+
+#alpO::before {
+  background-image: url("/o.80fcbf60.png");
+}
+
+#alpP::before {
+  background-image: url("/p.5e75b974.png");
+}
+
+#alpQ::before {
+  background-image: url("/q.0be2bc1b.png");
+}
+
+#alpR::before {
+  background-image: url("/r.641922b8.png");
+}
+
+#alpS::before {
+  background-image: url("/s.72706e70.png");
+}
+
+#alpT::before {
+  background-image: url("/t.999be672.png");
+}
+
+#alpU::before {
+  background-image: url("/u.359171cc.png");
+}
+
+#alpV::before {
+  background-image: url("/v.8c39bb3b.png");
+}
+
+#alpW::before {
+  background-image: url("/w.651818b7.png");
+}
+
+#alpX::before {
+  background-image: url("/x.dae0f9c2.png");
+}
+
+#alpY::before {
+  background-image: url("/y.d4e77739.png");
+}
+
+#alpZ::before {
+  background-image: url("/z.26a7d897.png");
+}
+
+.footer {
+  background-color: #ff0000;
+}
+.footer--logo {
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+}
+.footer--logo img {
+  width: 100px;
+}
+.footer--copyright {
+  text-align: center;
+  width: 100%;
+  background-color: #a10101;
+  padding: 0.5em 0;
+  color: white;
+}
+
+.footer--nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 0.5em;
+}
+.footer--nav a {
+  position: relative;
+  margin-right: 0;
+  font-weight: bold;
+  color: white;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.4s cubic-bezier(0.22, 0.43, 0.35, 1.5);
+}
+.footer--nav a:hover, .footer--nav a:focus {
+  opacity: 0.9;
+}
+.footer--nav a:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 43.75em) {
+  .footer--nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer--nav a {
+    margin: 1em 0;
+  }
+  .footer--nav span {
+    display: block;
+    text-align: center;
   }
 }
 

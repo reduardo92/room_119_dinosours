@@ -1,0 +1,62 @@
+.footer {
+  background-color: #ff0000;
+
+  &--logo {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+    img {
+      width: 100px;
+    }
+  }
+
+  &--copyright {
+    text-align: center;
+    width: 100%;
+    background-color: #a10101;
+    padding: 0.5em 0;
+    color: white;
+  }
+}
+
+.footer--nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 0.5em;
+
+  a {
+    position: relative;
+    margin-right: 0;
+    font-weight: bold;
+    color: white;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    @include cubicBezier;
+
+    &:hover,
+    &:focus {
+      opacity: 0.9;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@include mediaTablet {
+  .footer--nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      margin: 1em 0;
+    }
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+}
